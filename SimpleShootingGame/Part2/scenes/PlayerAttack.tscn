@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://byt3la06h0j2i"]
+
+[ext_resource type="Texture2D" uid="uid://cc62ng2r56ksw" path="res://assets/player_attack.png" id="1_jgerb"]
+[ext_resource type="Script" path="res://scripts/PlayerAttack.gd" id="1_nbyqg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nkwlu"]
+radius = 8.0
+
+[node name="PlayerAttack" type="Area2D"]
+script = ExtResource("1_nbyqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jgerb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nkwlu")
